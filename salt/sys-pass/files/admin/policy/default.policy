@@ -1,9 +1,0 @@
-# SPDX-FileCopyrightText: 2020 - 2022 Rudd-O. <https://github.com/rudd-o/qubes-pass>
-# SPDX-FileCopyrightText: 2024 - 2025 Blacky <gaschz@kisss.de>
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
-## Default qubes-pass policies.
-
-ruddo.PassRead     *   @anyvm   @anyvm   ask target=sys-pass default_target=sys-pass
-ruddo.PassManage   *   @anyvm   @anyvm   ask target=sys-pass default_target=sys-pass
