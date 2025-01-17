@@ -11,3 +11,6 @@
 [submodule "salt/sys-pass/passff-host"]
 	path = salt/sys-pass/passff-host
 	url = https://codeberg.org/PassFF/passff-host
+[submodule "qubes-pass"]
+	path = qubes-pass
+	url = https://github.com/rudd-o/qubes-pass
