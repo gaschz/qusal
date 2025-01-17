@@ -14,3 +14,6 @@
 [submodule "qubes-pass"]
 	path = qubes-pass
 	url = https://github.com/rudd-o/qubes-pass
+[submodule "salt/sys-pass/qubes-pass"]
+	path = salt/sys-pass/qubes-pass
+	url = https://github.com/rudd-o/qubes-pass
