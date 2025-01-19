@@ -5,15 +5,9 @@
 [submodule "salt/dotfiles"]
 	path = salt/dotfiles
 	url = ../dotfiles/
-[submodule "salt/sys-pass/files/server/qubes-pass"]
-	path = salt/sys-pass/files/server/qubes-pass
-	url = https://github.com/rudd-o/qubes-pass
 [submodule "salt/sys-pass/passff-host"]
 	path = salt/sys-pass/passff-host
 	url = https://codeberg.org/PassFF/passff-host
-[submodule "qubes-pass"]
-	path = qubes-pass
-	url = https://github.com/rudd-o/qubes-pass
 [submodule "salt/sys-pass/qubes-pass"]
 	path = salt/sys-pass/qubes-pass
 	url = https://github.com/rudd-o/qubes-pass
