@@ -1,13 +1,13 @@
 {#
 SPDX-FileCopyrightText: 2022 - 2023 unman <unman@thirdeyesecurity.org>
-SPDX-FileCopyrightText: 2023 - 2024 Benjamin Grande M. S. <ben.grande.b@gmail.com>
+SPDX-FileCopyrightText: 2023 - 2025 Benjamin Grande M. S. <ben.grande.b@gmail.com>
 
 SPDX-License-Identifier: AGPL-3.0-or-later
 #}
 
 {% if grains['nodename'] != 'dom0' %}
 
-{% set pihole_tag = 'v5.18.3' -%}
+{% set pihole_tag = 'v5.18.4' -%}
 
 include:
   - utils.tools.common.update
@@ -107,10 +107,9 @@ include:
   cmd.run:
     - require:
       - file: "{{ slsdotpath }}-save-keys"
-    - name: gpg --status-fd=2 --homedir . --import download/*.asc
+    - name: gpg --homedir . --import download/*.asc
     - cwd: /root/.gnupg/pihole
     - runas: root
-    - success_stderr: IMPORT_OK
 
 "{{ slsdotpath }}-import-ownertrust":
   cmd.run:
@@ -125,7 +124,9 @@ include:
   cmd.run:
     - require:
       - git: "{{ slsdotpath }}-git-clone"
-    - name: GNUPGHOME="$HOME/.gnupg/pihole" git verify-commit {{ pihole_tag }}
+    - env:
+      - GNUPGHOME: "/home/user/.gnupg/pihole"
+    - name: git -c gpg.program=gpg2 verify-commit {{ pihole_tag }}
     - cwd: /root/pi-hole
     - runas: root
 

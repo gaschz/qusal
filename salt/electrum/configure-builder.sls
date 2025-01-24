@@ -1,5 +1,5 @@
 {#
-SPDX-FileCopyrightText: 2024 Benjamin Grande M. S. <ben.grande.b@gmail.com>
+SPDX-FileCopyrightText: 2024 - 2025 Benjamin Grande M. S. <ben.grande.b@gmail.com>
 
 SPDX-License-Identifier: AGPL-3.0-or-later
 #}
@@ -12,7 +12,7 @@ include:
   - dotfiles.copy-sh
 
 ## https://download.electrum.org/VERSION/Electrum-VERSION.tar.gz(.asc)
-{% set electrum_version = '4.5.5' -%}
+{% set electrum_version = '4.5.8' -%}
 {% set electrum_url_dir = 'https://download.electrum.org/' ~ electrum_version ~ '/' -%}
 {% set electrum_archive_dir = 'Electrum-' ~ electrum_version -%}
 {% set electrum_file_archive = electrum_archive_dir ~ '.tar.gz' -%}
@@ -44,10 +44,9 @@ include:
   cmd.run:
     - require:
       - file: "{{ slsdotpath }}-save-keys"
-    - name: gpg --status-fd=2 --homedir . --import download/*.asc
+    - name: gpg --homedir . --import download/*.asc
     - cwd: /home/user/.gnupg/electrum
     - runas: user
-    - success_stderr: IMPORT_OK
 
 "{{ slsdotpath }}-import-ownertrust":
   cmd.run:
