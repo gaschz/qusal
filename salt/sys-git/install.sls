@@ -21,8 +21,10 @@ include:
     - skip_suggestions: True
     - setopt: "install_weak_deps=False"
     - pkgs:
+      - qubes-core-agent-networking
       - git
       - man-db
+      - curl
 
 "{{ slsdotpath }}-rpc":
   file.recurse:
@@ -42,5 +44,11 @@ include:
     - group: root
     - mode: '0755'
     - makedirs: True
+
+"{{ slsdotpath }}-add-user-to-wheel-group":
+  group.present:
+    - name: wheel
+    - addusers:
+      - user
 
 {% endif -%}

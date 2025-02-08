@@ -30,11 +30,12 @@ present:
 prefs:
 - template: tpl-{{ slsdotpath }}
 - label: gray
-- netvm: ""
+- netvm: "*default*"
 - audiovm: ""
 - vcpus: 1
 - memory: 200
 - maxmem: 300
+- provides-network: true
 features:
 - enable:
   - servicevm
