@@ -7,7 +7,7 @@
 	url = ../dotfiles/
 [submodule "salt/sys-pass/passff-host"]
 	path = salt/sys-pass/passff-host
-	url = https://codeberg.org/PassFF/passff-host
+	url = ../passff-host
 [submodule "salt/sys-pass/qubes-pass"]
 	path = salt/sys-pass/qubes-pass
-	url = https://github.com/rudd-o/qubes-pass
+	url = ../qubes-pass
