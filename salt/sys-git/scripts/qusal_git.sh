@@ -19,7 +19,7 @@ git clone https://codeberg.org/gaschz/passff-host.git
 cd qusal
 git config --global user.name "Blacky"
 git config --global user.email "gaschz@kisss.de"
-git config --global user.signingkey "8ACDC545CD44CD87"
+git config --global user.signingkey "770B34E4ADA21C3A"
 
 git remote add local ~/src/qusal
 git remote add gitea http://meister@localhost:3000/meister/qusal
