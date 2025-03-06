@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Signal
+Comment=
+Exec=qvm-run -u signal179 signal 'export https_proxy="http://10.137.0.33:8118"; signal-desktop %U'
+Icon=signal-desktop
+Path=/home/signal179
+Terminal=false
+StartupNotify=false

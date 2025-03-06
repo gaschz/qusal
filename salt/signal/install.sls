@@ -28,5 +28,15 @@ include:
       - signal-desktop
       - dunst
       - libayatana-appindicator3-1
+      - luit
+
+"{{ slsdotpath }}-desktop-application-signal179":
+  file.managed:
+    - name: /usr/share/applications/signal179.desktop
+    - source: salt://{{ slsdotpath }}/files/signal179.desktop
+    - mode: '0644'
+    - user: root
+    - group: root
+    - makedirs: True
 
 {% endif -%}

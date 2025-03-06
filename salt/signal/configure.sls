@@ -12,11 +12,20 @@ include:
 
 "{{ slsdotpath }}-desktop-autostart":
   file.symlink:
-    - name: /home/user/.config/autostart/signal-desktop.desktop
-    - target: /usr/share/applications/signal-desktop.desktop
+    - name: /home/user/.config/autostart/signal.desktop
+    - target: /usr/share/applications/signal.desktop
     - user: user
     - group: user
     - force: True
+    - makedirs: True
+
+"{{ slsdotpath }}-desktop-application-signal179":
+  file.managed:
+    - name: /usr/share/applications/signal179.desktop
+    - source: salt://{{ slsdotpath }}/files/signal179.desktop
+    - mode: '0644'
+    - user: root
+    - group: root
     - makedirs: True
 
 {% endif -%}

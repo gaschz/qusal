@@ -1,0 +1,14 @@
+# SPDX-FileCopyrightText: 2024 Blacky <blacky@kisss.de>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+[Desktop Entry]
+Name=Signal179
+#Exec='su - signal179 export https_proxy="http://10.137.0.33:8118"; /usr/bin/signal-desktop %U'
+Exec='su - signal179 /usr/bin/signal-desktop %U'
+Icon=signal-desktop
+Terminal=false
+StartupWMClass=Signal
+Type=Application
+MimeType=x-scheme-handler/sgnl;x-scheme-handler/signalcaptcha;
+Categories=Network;InstantMessaging;Chat;

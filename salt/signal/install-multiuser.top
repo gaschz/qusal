@@ -5,6 +5,5 @@ SPDX-License-Identifier: AGPL-3.0-or-later
 #}
 
 base:
-  'signal':
-    - match: nodegroup
-    - signal.configure
+  'tpl-signal':
+    - signal.install-multiuser

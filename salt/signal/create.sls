@@ -18,8 +18,8 @@ prefs:
 - audiovm: ""
 features:
 - set:
-  - menu-items: "signal-desktop.desktop qubes-open-file-manager.desktop qubes-run-terminal.desktop qubes-start.desktop"
-  - default-menu-items: "signal-desktop.desktop qubes-open-file-manager.desktop qubes-run-terminal.desktop qubes-start.desktop"
+  - menu-items: "signal157.desktop signal179.desktop signalui.desktop qubes-open-file-manager.desktop qubes-run-terminal.desktop qubes-start.desktop"
+  - default-menu-items: "signal157.desktop signal179.desktop signalui.desktop qubes-open-file-manager.desktop qubes-run-terminal.desktop qubes-start.desktop"
 {%- endload %}
 {{ load(defaults) }}
 
@@ -48,6 +48,6 @@ features:
   - service.tracker
   - service.evolution-data-server
 - set:
-  - menu-items: "signal-desktop.desktop qubes-open-file-manager.desktop qubes-run-terminal.desktop qubes-start.desktop"
+  - menu-items: "signal157.desktop signal179.desktop signalui.desktop qubes-open-file-manager.desktop qubes-run-terminal.desktop qubes-start.desktop"
 {%- endload %}
 {{ load(defaults) }}
