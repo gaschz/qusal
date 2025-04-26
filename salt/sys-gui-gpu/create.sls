@@ -11,7 +11,8 @@ SPDX-License-Identifier: GPL-2.0-only
 {%- from "qvm/template-gui.jinja" import gui_common -%}
 
 include:
-  - .clone
+  - {{ slsdotpath }}.clone
+  - sys-gui.create
 
 "{{ slsdotpath }}-installed":
   pkg.installed:
