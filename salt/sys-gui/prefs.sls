@@ -14,3 +14,11 @@ SPDX-License-Identifier: AGPL-3.0-or-later
     - require:
       - qvm: "{{ slsdotpath }}-autostart"
     - name: qubes-prefs -- default_guivm {{ slsdotpath }}
+
+"{{ slsdotpath }}-set-tpl-{{ slsdotpath }}-management_dispvm-to-default":
+  qvm.vm:
+    - require:
+      - sls: {{ slsdotpath }}.create
+    - name: tpl-{{ slsdotpath }}
+    - prefs:
+      - management_dispvm: "*default*"
